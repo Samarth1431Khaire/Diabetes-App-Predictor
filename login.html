@@ -1,0 +1,40 @@
+<html>
+<head>
+  <title> Auth App By Sk </title>
+  <style>
+   *{font-size:40px;}
+    body{
+           background-image:url({{url_for('static', filename='bulitin/car2.jpg')}});
+           background-size:cover;
+           color:red;
+          
+         }
+         h1{
+           background-color:navy;
+            }
+    .btn{border-radius:30px;
+          color:red;
+          background-color:navy;}
+    .use{color:navy;}
+    a{color: black ;}
+   </style>    
+</head>
+<body>
+ <center>
+   <h1> Login Page </h1>
+   <a href="{{url_for("readme")}}" class="use">How to Use</a>
+    <br/><br/>
+   <a href="{{url_for("signup")}}"> New Users</a>
+   <br/><br/>
+   <form method="POST">
+   <input type="text" name="un" placeholder="enter username" required/>
+   <br/><br/>
+   <input type="password" name="pw" placeholder="enter password" required/>
+   <br/><br/>
+   <input type="submit" value="Login" class="btn"/>
+   <br/><br/>
+   </form>
+   {{msg}}
+</center>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<html>
+  <head>
+    <title> App By Samarth </title>
+    <style>
+       *{font-size:30px;}
+       body{
+           background-image:url({{url_for('static', filename='bulitin/car1.jpg')}});
+           background-size:cover;
+           color:red;
+         }
+         h1{
+           background-color:navy;
+           color:red;
+            }
+         .btn{border-radius:30px;
+          color:red;
+          background-color:navy;}
+          h2{color:red;}
+          
+        
+           
+       
+    </style>
+    
+  </head>
+   
+  <body >
+       
+       <center>
+        <h1> Diabetes Predictor </h1>
+        
+               
+         <form method="POST">
+         
+             
+         <input type="number" step="any" name="fs" placeholder="enter fasting sugar" required/>
+           <br/><br/>
+         <h2> Frequent Urination <h2>
+
+         <input type="radio" name="fu" value="no" checked=true/>No
+         <input type="radio" name="fu" value="yes" />Yes
+           <br/><br/>
+         <input type="submit" name="action" value="Check Diabetes"/>
+         </form>
+
+          <form method="POST">
+          <input type="submit" name="action" value="Logout" class="btn" style="position:absolute; top:50px; right:80px"/>
+          </form>
+        
+         {{msg}}
+      </center>
+  </body>
+  </div>
+</html>
